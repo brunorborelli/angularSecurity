@@ -1,0 +1,19 @@
+<p-card header="Login">
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="username">Username</label>
+      <input id="username" pInputText [(ngModel)]="username" />
+    </div>
+
+    <div class="p-field">
+      <label for="password">Password</label>
+      <input id="password" type="password" pInputText [(ngModel)]="password" />
+    </div>
+
+    <div *ngIf="loginFailed" class="p-error">
+      <p>Login failed. Please check your credentials.</p>
+    </div>
+
+    <button pButton label="Login" (click)="login()"></button>
+  </div>
+</p-card>
